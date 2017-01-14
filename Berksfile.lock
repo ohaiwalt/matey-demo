@@ -1,0 +1,14 @@
+DEPENDENCIES
+  matey
+    path: .
+    metadata: true
+
+GRAPH
+  apt (5.0.1)
+    compat_resource (>= 12.16.3)
+  compat_resource (12.16.3)
+  docker (2.13.9)
+    compat_resource (>= 12.16.2)
+  matey (0.1.0)
+    apt (>= 0.0.0)
+    docker (~> 2.0)

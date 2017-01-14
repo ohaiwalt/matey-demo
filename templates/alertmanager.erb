@@ -1,0 +1,16 @@
+global:
+  resolve_timeout: 5m
+route:
+  group_by: ['job']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 5m
+  receiver: 'slack'
+receivers:
+- name: 'webhook'
+  webhook_configs:
+  - url: 'http://alertmanagerwh:30500/'
+- name: 'slack'
+  slack_configs:
+  - api_url: 'https://hooks.slack.com/services/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'
+    send_resolved: true

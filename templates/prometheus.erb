@@ -1,0 +1,20 @@
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - 192.168.33.33:9093
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+- /etc/prometheus/rules/*.rules
+
+scrape_configs:
+- job_name: prometheus
+  static_configs:
+  - targets:
+    - 192.168.33.33:9090
+    - 192.168.33.33:9100
+    - 192.168.33.33:9104
